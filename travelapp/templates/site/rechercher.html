@@ -1,0 +1,332 @@
+{% extends 'site/base.html' %}
+{% load static %}
+
+{% block title %}Recherche{% endblock %}
+
+
+{% block css %}{% endblock %}
+
+
+{% block body %}
+    <!--terrestres start-->
+	<section class="order-food-online">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="new-heading">
+						<h1> Voie Terrestre </h1>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+
+                {% if results_terrestre %}
+                    {% for terrestre in results_terrestre %}
+                        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                        <div class="all-meal">
+                            <div class="top">
+                                <a href=""><div class="bg-gradient"></div></a>
+                                <div class="top-img">
+                                    <img src="{{ terrestre.voyage.image.url }}" style="height: 170px; width: 260px;" alt="">
+                                </div>
+                                <div class="logo-img">
+                                    <img src="{{ terrestre.voyage.agence.logo.url }}" style="height: 60px; width: 60px;" alt="">
+                                </div>
+                                <div class="top-text">
+                                    <div class="heading"><h4><a href="">{{ terrestre.voyage.agence.name }}</a></h4></div>
+                                    <div class="sub-heading">
+                                    <h5><a href="">{{ terrestre.voyage.name }}</a></h5>
+                                    <p>{{ terrestre.nbre_places_classe }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <div class="bottom-text">
+                                    <div class="delivery"><i class="far fa-money-bill-alt"></i>Classe | {{ terrestre.name }}</div>
+                                    <div class="delivery"><i class="fas fa-map-marker-alt"></i>Départ | {{ terrestre.voyage.ville_depart }}</div>
+                                    <div class="delivery"><i class="fas fa-map-marker-alt"></i>Arrivée | {{ terrestre.voyage.ville_arrivee }}</div>
+                                    <div class="time"><i class="far fa-clock"></i>Embarquement | {{ terrestre.voyage.heure_depart }}</div>
+                                    <div class="delivery"><i class="fas fa-male"></i>Prix Adulte | {{ terrestre.price_adult }}</div>
+                                    <div class="delivery"><i class="fas fa-child"></i>Prix Enfant | {{ terrestre.price_child }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <br><br>
+                    <div class="col-md-12"></div>
+                    <div class="col-md-12">
+                        <div class="alert alert-primary" id="alert" role="alert">
+                            Aucun voyage par voie terrestre programmé !!!
+                        </div>
+                    </div>
+
+                {% endif %}
+
+			</div>
+			<div class="meal-btn">
+				<div class="main-p-pagination">
+                    <nav aria-label="Page navigation example">
+                        {% if results_terrestre.paginator.num_pages > 1 %}
+                        <ul class="pagination">
+
+                            {% if results_terrestre.has_previous %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page=1">
+                                  <i class="fas fa-chevron-left"></i>
+                                  <i class="fas fa-chevron-left"></i>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ results_terrestre.previous_page_number }}">
+                                  <i class="fas fa-chevron-left"></i>
+                                </a>
+                            </li>
+                            {% endif %}
+
+
+                            <li class="page-item"><a class="page-link active" href="#">{{ results_terrestre.number }}</a></li>
+
+
+                            {% if results_terrestre.has_next %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ results_terrestre.next_page_number }}">    
+                                  <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ results_terrestre.paginator.num_pages }}">
+                                  <i class="fas fa-chevron-right"></i>
+                                  <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </li>
+                            {% endif %}
+
+
+                        </ul>
+                        {% endif %}
+                    </nav>
+                </div>
+			</div>
+		</div>
+	</section>
+	<!--terrestres-->
+
+    <!--trains start-->
+	<section class="order-food-online">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="new-heading">
+						<h1> Voie Ferroviaire </h1>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+
+                {% if results_ferroviaire %}
+                    {% for train in results_ferroviaire %}
+                        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                            <div class="all-meal">
+                                <div class="top">
+                                    <a href=""><div class="bg-gradient"></div></a>
+                                    <div class="top-img">
+                                        <img src="{{ train.voyage.image.url }}" style="height: 170px; width: 260px;" alt="">
+                                    </div>
+                                    <div class="logo-img">
+                                        <img src="{{ train.voyage.agence.logo.url }}" style="height: 60px; width: 60px;" alt="">
+                                    </div>
+                                    <div class="top-text">
+                                        <div class="heading"><h4><a href="">{{ train.voyage.agence.name }}</a></h4></div>
+                                        <div class="sub-heading">
+                                        <h5><a href="">{{ train.voyage.name }}</a></h5>
+                                        <p>{{ train.nbre_places_classe }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <div class="bottom-text">
+                                        <div class="delivery"><i class="far fa-money-bill-alt"></i>Classe | {{ train.name }}</div>
+                                        <div class="delivery"><i class="fas fa-map-marker-alt"></i>Départ | {{ train.voyage.ville_depart }}</div>
+                                        <div class="delivery"><i class="fas fa-map-marker-alt"></i>Arrivée | {{ train.voyage.ville_arrivee }}</div>
+                                        <div class="time"><i class="far fa-clock"></i>Embarquement | {{ train.voyage.heure_depart }}</div>
+                                        <div class="delivery"><i class="fas fa-male"></i>Prix Adulte | {{ train.price_adult }}</div>
+                                        <div class="delivery"><i class="fas fa-child"></i>Prix Enfant | {{ train.price_child }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <br><br>
+                    <div class="col-md-12"></div>
+                    <div class="col-md-12">
+                        <div class="alert alert-primary" id="alert" role="alert">
+                            Aucun voyage par voie ferroviaire programmé !!!
+                        </div>
+                    </div>
+
+
+                {% endif %}
+
+			</div>
+			<div class="meal-btn">
+                <div class="main-p-pagination">
+                    <nav aria-label="Page navigation example">
+                        {% if results_ferroviaire.paginator.num_pages > 1 %}
+                        <ul class="pagination">
+
+                            {% if results_ferroviaire.has_previous %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page=1">
+                                  <i class="fas fa-chevron-left"></i>
+                                  <i class="fas fa-chevron-left"></i>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ results_ferroviaire.previous_page_number }}">
+                                  <i class="fas fa-chevron-left"></i>
+                                </a>
+                            </li>
+                            {% endif %}
+
+
+                            <li class="page-item"><a class="page-link active" href="#">{{ results_ferroviaire.number }}</a></li>
+
+
+                            {% if results_ferroviaire.has_next %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ results_ferroviaire.next_page_number }}">    
+                                  <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ results_ferroviaire.paginator.num_pages }}">
+                                  <i class="fas fa-chevron-right"></i>
+                                  <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </li>
+                            {% endif %}
+
+
+                        </ul>
+                        {% endif %}
+                    </nav>
+                </div>
+            </div>
+		</div>
+	</section>
+	<!--trains-->
+
+    <!--maritimes start-->
+	<section class="order-food-online">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="new-heading">
+						<h1> Voie Maritime </h1>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+
+                {% if results_maritime %}
+                    {% for maritime in results_maritime %}
+                        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                        <div class="all-meal">
+                            <div class="top">
+                                <a href=""><div class="bg-gradient"></div></a>
+                                <div class="top-img">
+                                    <img src="{{ maritime.voyage.image.url }}" style="height: 170px; width: 260px;" alt="">
+                                </div>
+                                <div class="logo-img">
+                                    <img src="{{ maritime.voyage.agence.logo.url }}" style="height: 60px; width: 60px;" alt="">
+                                </div>
+                                <div class="top-text">
+                                    <div class="heading"><h4><a href="">{{ maritime.voyage.agence.name }}</a></h4></div>
+                                    <div class="sub-heading">
+                                    <h5><a href="">{{ maritime.voyage.name }}</a></h5>
+                                    <p>{{ maritime.nbre_places_classe }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <div class="bottom-text">
+                                    <div class="delivery"><i class="far fa-money-bill-alt"></i>Classe | {{ maritime.name }}</div>
+                                    <div class="delivery"><i class="fas fa-map-marker-alt"></i>Départ | {{ maritime.voyage.ville_depart }}</div>
+                                    <div class="delivery"><i class="fas fa-map-marker-alt"></i>Arrivée | {{ maritime.voyage.ville_arrivee }}</div>
+                                    <div class="time"><i class="far fa-clock"></i>Embarquement | {{ maritime.voyage.heure_depart }}</div>
+                                    <div class="delivery"><i class="fas fa-male"></i>Prix Adulte | {{ maritime.price_adult }}</div>
+                                    <div class="delivery"><i class="fas fa-child"></i>Prix Enfant | {{ maritime.price_child }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <br><br>
+                    <div class="col-md-12"></div>
+                    <div class="col-md-12">
+                        <div class="alert alert-primary" id="alert" role="alert">
+                          Aucun voyage par voie maritime programmé !!!
+                        </div>
+                    </div>
+                {% endif %}
+
+			</div>
+			<div class="meal-btn">
+                <div class="main-p-pagination">
+                    <nav aria-label="Page navigation example">
+                        {% if results_maritime.paginator.num_pages > 1 %}
+                        <ul class="pagination">
+
+                            {% if results_maritime.has_previous %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page=1">
+                                  <i class="fas fa-chevron-left"></i>
+                                  <i class="fas fa-chevron-left"></i>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ results_maritime.previous_page_number }}">
+                                  <i class="fas fa-chevron-left"></i>
+                                </a>
+                            </li>
+                            {% endif %}
+
+
+                            <li class="page-item"><a class="page-link active" href="#">{{ results_maritime.number }}</a></li>
+
+
+                            {% if results_maritime.has_next %}
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ results_maritime.next_page_number }}">    
+                                  <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="?page={{ results_maritime.paginator.num_pages }}">
+                                  <i class="fas fa-chevron-right"></i>
+                                  <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </li>
+                            {% endif %}
+
+
+                        </ul>
+                        {% endif %}
+                    </nav>
+                </div>
+            </div>
+		</div>
+	</section>
+	<!--maritimes-->
+
+
+{% endblock %}
+
+
+{% block javascript %}{% endblock %}
+
+

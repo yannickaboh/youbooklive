@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<!-- YOUBOOKLIVE -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="YOUBOOKLIVE est une plateforme ou vous avez la possibilité d'acheter ou réserver des 
+    billets pour des voyages de votre choix et le tout payable en ligne sans plus avoir à vous déplacer.">
+    <meta name="author" content="Yannick ABOH">
+    <meta name="email" content="yannickabohthierry@gmail.com">
+    <meta name="tel" content="+241074835631 | +241066682353">
+	
+	<!-- Favicon -->
+	<link href="images/fav.png" rel="shortcut icon" type="image/x-icon"/>
+
+    <title>YOUBOOKLIVE | {% block title %}{% endblock %}</title>
+
+    <!-- Bootstrap core CSS-->
+    <link href="{% static 'travelapp/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'travelapp/css/style.css' %}" rel="stylesheet">
+	<link href="{% static 'travelapp/css/responsive.css' %}" rel="stylesheet">
+	<link href="{% static 'travelapp/css/mega.menu.css' %}" rel="stylesheet">
+	<link href="{% static 'travelapp/css/owlslider.css' %}" rel="stylesheet">
+	<link href="{% static 'travelapp/css/datepicker.css' %}" rel="stylesheet">
+    
+	<!-- Owl Carousel for this template-->
+	<link href="{% static 'travelapp/vendor/OwlCarousel/assets/owl.carousel.css' %}" rel="stylesheet">
+	<link href="{% static 'travelapp/vendor/OwlCarousel/assets/owl.theme.default.min.css' %}" rel="stylesheet">
+
+	<!-- Owl Carousel for this template-->
+	<link rel="stylesheet" href="{% static 'travelapp/assets/owlcarousel/assets/owl.carousel.min.css' %}"> 
+	
+    <!-- Fontawesome styles for this template-->
+    <link href="{% static 'travelapp/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+
+    {% block css %}{% endblock %}
+	
+</head>
+
+<body oncontextmenu="return false;">
+
+	
+
+	{% include 'site/header.html' %}
+	{% include 'site/banner.html' %}
+	{% include 'site/how-to-work.html' %}
+
+
+	{% block body %}
+	{% endblock %}
+
+	
+	{% include 'site/quick-searches.html' %}
+
+	{% include 'site/download-link.html' %}
+	{% include 'site/footer.html' %}
+
+	{% block javascript %}{% endblock %}
+
+	<!--Bootstrap core JavaScript-->
+	<script src="{% static 'travelapp/vendor/jquery/jquery.min.js' %}"></script>
+	<script src="{% static 'travelapp/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+	<!--Core plugin JavaScript-->
+	<script src="{% static 'travelapp/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+	<!--Assect scripts for this page-->
+	<script src="{% static 'travelapp/vendor/OwlCarousel/owl.carousel.js' %}"></script>
+	<script src="{% static 'travelapp/js/owlslider.js' %}"></script>
+	<script src="{% static 'travelapp/js/bootstrap-datepicker.js' %}"></script>
+	<script src="{% static 'travelapp/js/bootstrap-select.js' %}"></script>
+	<script>
+	$(function(){
+		$('.datepicker').datepicker();
+	});
+	</script>
+	
+</body>
+
+
+<!-- YOUBOOKLIVE -->
+</html>

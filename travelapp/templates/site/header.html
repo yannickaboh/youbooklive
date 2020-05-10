@@ -1,0 +1,116 @@
+{% load static %}
+		<!--header start-->
+		<header id="header" class="default">
+			<div class="topbar">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="topbar-left text-center text-md-left">
+									<ul class="list-inline">
+										<li> <a href=""> Contact </a></li>
+										<li> <a href=""> A Propos </a></li>
+										<li> <a href=""> Comment ça marche ? </a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-8">
+								<div class="topbar-right text-center text-md-right">
+									<ul class="list-inline">									
+										<li>
+											{% if item_count > 0 %}
+											<a href="">
+												<i class="fas fa-shopping-cart"></i> 
+												Panier
+												<span class="badge badge-secondary">{{ item_count }}</span>
+											</a>
+											{% else %}
+											<a href="">
+												<i class="fas fa-shopping-cart"></i> 
+												Panier
+												<span class="badge badge-secondary">{{ item_count }}</span>
+											</a>
+											{% endif %}
+										</li>										
+										
+										{% if user.is_authenticated and user.username %}
+										<li class="nav-item dropdown">
+										Welcome, 
+										<a  class="dropdown-toggle-no-caret" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle"></i>{{ user.username }}  <i class="fas fa-caret-down"></i></a>
+											<div class="dropdown-menu dropdown-menu-right" aria-labelledby="accountDropdown">
+											  <a class="dropdown-item" href=""> Mon Dashboard</a>
+											  <a class="dropdown-item" href="setting.html"> Paramètres</a>
+											  <a class="dropdown-item" href=""> Deconnexion</a>
+											 
+										   </div>
+										</li>	
+										{% else %}
+										<li>
+											<a href="">
+												<i class="fas fa-user-plus"></i> 
+												S'inscrire
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<i class="fas fa-sign-in-alt"></i> 
+												Se Connecter
+											</a>
+										</li>
+										{% endif %}
+
+
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+			<div class="menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2 col-sm-12 col-xs-12">
+							<div class="menu-left text-center text-md-left">
+								<div class="logo-box">
+									<a href="{% url 'index' %}"><img src="images/logo.svg" alt=""></a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-10 col-sm-12 col-xs-12">	
+							<div class="menu-items">
+								<nav class="navbar navbar-expand-lg navbar-light bg-light menu-right">										
+									<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+										<span class="navbar-toggler-icon"></span>
+									</button>
+
+									<div class="collapse navbar-collapse" id="navbarSupportedContent">
+										<ul class="navbar-nav mr-auto nav-text">
+											<li class="nav-item active">
+												<a class="nav-link" href="{% url 'index' %}">Acceuil </a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="">Bus</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="">Trains</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="">Bateaux</a>
+											</li>
+										</ul>											
+									</div>
+									
+								</nav>
+								<div class="icons-set">
+									<ul class="list-inline">
+										<li class="partner-btn">
+											<a href="" class="b-btn btn-link">Devenir Partenaire</a>
+										</li>										
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>				
+		</header>
+		<!--header end-->

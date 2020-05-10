@@ -1,0 +1,22 @@
+<!--title-bar start-->
+	<section class="title-bar">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="left-title-text">
+					<h3>{% block subtitle %}{% endblock %}</h3>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="right-title-text">  
+						<ul>
+							<li class="breadcrumb-item"><a href="{% url 'restaurants:index' %}">Acceuil</a></li>
+							<li class="breadcrumb-item"><a href="{% url 'restaurants:get_restaurants' %}">Voyages</a></li>
+							<li class="breadcrumb-item active" aria-current="page">{% block subtitle2 %}{% endblock %}</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--title-bar end-->

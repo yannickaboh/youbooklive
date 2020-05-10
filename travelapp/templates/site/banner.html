@@ -1,0 +1,34 @@
+	{% load static %}
+	<!--banner start-->
+	<section class="block-preview">
+			<div class="cover-banner" style="background-image: url({% static 'travelapp/images/homepage/banner2.jpg' %})"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-md-6 col-sm-12">
+						<div class="left-text-b">
+							<h1 class="title">Bienvenue sur YOUBOOKLIVE !!!</h1>
+							<h6 class="exeption">Acheter, Réserver aisément vos tickets de voyage.</h6>
+							<p>Nos services sont disponibles H24.</p>
+							<a class="bnr-btn btn-link" href="#">Lancez-vous !!!</a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+						<form method="get" action="{% url 'rechercher' %}">
+							{% csrf_token %}
+							<div class="form-box">
+								<div class="input-group-prepend">
+								  <div class="input-group-text"><i class="fas fa-map-marker-alt"></i></div>
+								</div>
+								<input  class="find-address skills" name="ville_depart" type="search" placeholder="Ville Départ"/>
+								<div class="input-group-prepend">
+								  <div class="input-group-text-1"><i class="fas fa-map-marker-alt"></i></div>
+								</div>
+								<input  class="find-resto skills" name="ville_arrivee" type="search" placeholder="Ville Arrivée"/>
+								<button class="search-btn btn-link" type="submit">Rechercher Votre Voyage</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+	</section>
+	<!--banner end-->
