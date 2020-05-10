@@ -25,7 +25,7 @@ SECRET_KEY = 'f+houn6mesu*-4^r0(z4p@owah-%82h80xs0!cgsxd6xhwa+&q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.237.1', 'pythonanywhere.com']
 
 # Google MAP API KEY
 GOOGLE_MAPS_API_KEY = 'AIzaSyDvBRw5JjebNnwQW6doJSbSJgAgpdgjs2M'
