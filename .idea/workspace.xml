@@ -14,11 +14,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/youbooklive/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="27" column="79" lean-forward="false" selection-start-line="27" selection-start-column="79" selection-end-line="27" selection-end-column="79" />
+            <state relative-caret-position="255">
+              <caret line="146" column="55" lean-forward="false" selection-start-line="146" selection-start-column="55" selection-end-line="146" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/youbooklive/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="28" column="58" lean-forward="false" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
+              <folding>
+                <element signature="e#635#667#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/travelapp/templates/site/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -45,7 +67,6 @@
         <option value="$PROJECT_DIR$/travelapp/templates/site/title-bar.html" />
         <option value="$PROJECT_DIR$/travelapp/templates/site/footer.html" />
         <option value="$PROJECT_DIR$/travelapp/templates/site/quick-searches.html" />
-        <option value="$PROJECT_DIR$/travelapp/templates/site/base.html" />
         <option value="$PROJECT_DIR$/travelapp/templates/site/how-to-work.html" />
         <option value="$PROJECT_DIR$/travelapp/templates/site/header.html" />
         <option value="$PROJECT_DIR$/travelapp/admin.py" />
@@ -55,6 +76,7 @@
         <option value="$PROJECT_DIR$/travelapp/views.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/youbooklive/settings.py" />
+        <option value="$PROJECT_DIR$/travelapp/templates/site/base.html" />
       </list>
     </option>
   </component>
@@ -86,6 +108,24 @@
             <path>
               <item name="youbooklive" type="b2602c69:ProjectViewProjectNode" />
               <item name="youbooklive" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="youbooklive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="youbooklive" type="462c0819:PsiDirectoryNode" />
+              <item name="travelapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="youbooklive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="youbooklive" type="462c0819:PsiDirectoryNode" />
+              <item name="travelapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="youbooklive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="youbooklive" type="462c0819:PsiDirectoryNode" />
+              <item name="travelapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="travelapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="youbooklive" type="b2602c69:ProjectViewProjectNode" />
@@ -175,7 +215,7 @@
         <state relative-caret-position="1139">
           <caret line="67" column="77" lean-forward="false" selection-start-line="67" selection-start-column="77" selection-end-line="67" selection-end-column="77" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
             <marker date="1589131871515" expanded="true" signature="574:1082" ph="..." />
             <marker date="1589131871515" expanded="true" signature="726:1082" ph="..." />
             <marker date="1589131871515" expanded="true" signature="727:1082" ph="..." />
@@ -247,7 +287,7 @@
         <state relative-caret-position="51">
           <caret line="41" column="19" lean-forward="true" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
           <folding>
-            <element signature="e#0#64#0" expanded="true" />
+            <element signature="e#0#64#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -309,13 +349,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/travelapp/templates/site/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="58" column="20" lean-forward="false" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/travelapp/templates/site/how-to-work.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -328,7 +361,7 @@
         <state relative-caret-position="1037">
           <caret line="67" column="77" lean-forward="false" selection-start-line="67" selection-start-column="77" selection-end-line="67" selection-end-column="77" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
             <marker date="1589131871515" expanded="true" signature="574:1082" ph="..." />
             <marker date="1589131871515" expanded="true" signature="726:1082" ph="..." />
             <marker date="1589131871515" expanded="true" signature="727:1082" ph="..." />
@@ -362,16 +395,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1485">
           <caret line="103" column="60" lean-forward="false" selection-start-line="103" selection-start-column="60" selection-end-line="103" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/youbooklive/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" column="58" lean-forward="false" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
-          <folding>
-            <element signature="e#635#667#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -422,7 +445,7 @@
         <state relative-caret-position="85">
           <caret line="44" column="56" lean-forward="false" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
           <folding>
-            <element signature="e#0#64#0" expanded="true" />
+            <element signature="e#0#64#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -435,11 +458,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/travelapp/templates/site/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/youbooklive/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="27" column="79" lean-forward="false" selection-start-line="27" selection-start-column="79" selection-end-line="27" selection-end-column="79" />
+        <state relative-caret-position="255">
+          <caret line="146" column="55" lean-forward="false" selection-start-line="146" selection-start-column="55" selection-end-line="146" selection-end-column="55" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/youbooklive/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="28" column="58" lean-forward="false" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
+          <folding>
+            <element signature="e#635#667#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
